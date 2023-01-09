@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
   bool cal = false;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           color: Colors.white,
@@ -142,7 +142,7 @@ class _MyAppState extends State<MyApp> {
                   'Total sum.$scale',
                   style: TextStyle(fontSize: 30),
                 ),
-              )
+              ),Icon(Icons.favorite_sharp, color: Colors.red,),
             ],
           ),
         ),
