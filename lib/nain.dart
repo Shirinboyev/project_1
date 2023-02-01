@@ -1,152 +1,88 @@
 import 'package:flutter/material.dart';
+// import 'package:project_1/nain.dart';
 
-void main() {
-  runApp(MyApp());
-}
+// void main() {
+//   runApp(MyApp());
+// }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
 
-class _MyAppState extends State<MyApp> {
-  int? val;
-  bool sa = false;
-  double scale = 0;
-  int saa = 0;
-  bool vala = false;
-  bool dal = false;
-  bool cal = false;
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          color: Colors.white,
-          child: Column(
-            children: [
-              Center(
-                child: Image.asset('images/1.png'),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Expanded(
-                        child: RadioListTile(
-                            value: 1,
-                            title: Text('Small'),
-                            groupValue: val,
-                            onChanged: (v) {
-                              saa++;
-                              setState(
-                                () {
-                                  scale = 10;
-                                  val = v;
-                                },
-                              );
-                            })),
-                    Expanded(
-                        child: RadioListTile(
-                            value: 2,
-                            title: Text(
-                              'Medium',
-                              style: TextStyle(fontSize: 13),
-                            ),
-                            groupValue: val,
-                            onChanged: (v) {
-                              saa++;
-                              setState(
-                                () {
-                                  scale = 20;
-                                  val = v;
-                                },
-                              );
-                            })),
-                    Expanded(
-                      child: RadioListTile(
-                          value: 3,
-                          title: Text('Large'),
-                          groupValue: val,
-                          onChanged: (v) {
-                            saa++;
-                            setState(
-                              () {
-                                scale = 30;
-                                val = v;
-                              },
-                            );
-                          }),
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Expanded(
-                      child: CheckboxListTile(
-                        value: vala,
-                        onChanged: (value) {
-                          setState(() {
-                            vala = !vala;
-                            if (vala) {
-                              scale += 65;
-                            } else
-                              scale -= 65;
-                          });
-                        },
-                        activeColor: Colors.blue,
-                      ),
-                    ),Text('Extra Cheese'),
-                    Expanded(
-                      child: CheckboxListTile(
-                        value: cal,
-                        onChanged: (value) {
-                          setState(() {
-                            cal = !cal;
-                            if (cal) {
-                              scale += 65;
-                            } else
-                              scale -= 65;
-                          });
-                        },
-                        activeColor: Colors.blue,
-                      ),
-                    ),Text('Onions'),
-                    Expanded(
-                      child: CheckboxListTile(
-                        value: dal,
-                        onChanged: (value) {
-                          setState(() {
-                            dal = !dal;
-                            if (dal) {
-                              scale += 65;
-                            } else
-                              scale -= 65;
-                          });
-                        },
-                        activeColor: Colors.blue,
-                        
-                      ),
-                    ),Text('Chicken')
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 80),
-                child: Text(
-                  'Total sum.$scale',
-                  style: TextStyle(fontSize: 30),
-                ),
-              ),Icon(Icons.favorite_sharp, color: Colors.red,),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+// class _MyAppState extends State<MyApp> {
+//   int? val;
+//   int scale = 0;
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           body: Container(
+//         color: Colors.white,
+//         child: Padding(
+//           padding: const EdgeInsets.symmetric(vertical: 160),
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               RadioListTile(
+//                 title: Text('data'),
+//                 value: 1,
+//                 groupValue: val,
+//                 onChanged: (v) {
+//                   setState(() {
+//                     scale = 1;
+//                     val = v;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 title: Text('data'),
+//                 value: 2,
+//                 groupValue: val,
+//                 onChanged: (v) {
+//                   setState(() {
+//                     scale = 2;
+//                     val = v;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 title: Text('data'),
+//                 value: 3,
+//                 groupValue: val,
+//                 onChanged: (v) {
+//                   setState(() {
+//                     scale = 3;
+//                     val = v;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 title: Text('data'),
+//                 value: 4,
+//                 groupValue: val,
+//                 onChanged: (v) {
+//                   setState(() {
+//                     scale = 4;
+//                     val = v;
+//                   });
+//                 },
+//               ),
+//               Text('click.$scale'),
+//               if (scale == 1) 
+//                 scale == 1 ? Image.asset('images/1.png',scale:1.5,) : Text('data'),
+//               if (scale == 2)
+//                 scale == 2 ? Image.asset('images/2.png') : Text('data'),
+//               if (scale == 3)
+//                 scale == 3 ? Image.asset('images/3.png') : Text('data'),
+//               if (scale == 4)
+//                 scale == 4 ? Image.asset('images/4.png') : Text('data'),
+//             ],
+//           ),
+//         ),
+//       )),
+//     );
+//   }
+// }
